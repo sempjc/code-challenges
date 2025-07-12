@@ -1,0 +1,83 @@
+:root {
+  --color-slate-900: rgb(31, 49, 79);
+  --color-slate-500: rgb(104, 119, 141);
+  --color-slate-300: rgb(213, 225, 239);
+  --color-white: rgb(255, 255, 255);
+  --spacing-500: 40px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --radius-500: 20px;
+  --radius-200: 10px;
+  --typography-font-family: "Outfit", sans-serif;
+  --typography-title-size: 22px;
+  --typography-title-line-height: 120%;
+  --typography-title-letter-spacing: 0px;
+  --typography-title-weight: bold;
+  --typography-body-size: 15px;
+  --typography-body-line-height: 140%;
+  --typography-body-letter-spacing: 0.2px;
+  --typography-body-weight: regular;
+  --shadow-200: 0 25px 25px 0 rgba(0, 0, 0, 4.77%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-slate-300);
+}
+
+html {
+  font-family: var(--typography-font-family);
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 812px;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  width: 320px;
+  padding: var(--spacing-200);
+  padding-bottom: var(--spacing-500);
+  background-color: var(--color-white);
+  border-radius: var(--radius-500);
+  box-shadow: var(--shadow-200);
+
+  & img {
+    border-radius: var(--radius-200);
+  }
+
+  & p {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    text-align: center;
+    font-size: var(--typography-body-size);
+    font-weight: var(--typography-body-weight);
+    line-height: var(--typography-body-line-height);
+    letter-spacing: var(--typography-body-letter-spacing);
+    color: var(--color-slate-500);
+    padding: 0 var(--spacing-200);
+  }
+
+  & span {
+    font-size: var(--typography-title-size);
+    line-height: var(--typography-title-line-height);
+    letter-spacing: var(--typography-title-letter-spacing);
+    font-size: var(--typography-title-size);
+    font-weight: var(--typography-title-weight);
+    color: var(--color-slate-900);
+  }
+}
